@@ -1,5 +1,5 @@
 prepare:
-	mkdir tmp
+	mkdir -p tmp
 	cp ~/.ssh/id_rsa.pub tmp
 clean:
 	rm -rf tmp
