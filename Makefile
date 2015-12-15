@@ -1,0 +1,15 @@
+prepare:
+	mkdir tmp
+	cp ~/.ssh/id_rsa.pub tmp
+clean:
+	rm -rf tmp
+
+build: prepare
+	docker build -t ansible-base-image .
+	make clean
+
+run:
+	docker run -p 2200:22 -it ansible-base-image
+
+ssh:
+	ssh -o StrictHostKeyChecking=no root@localhost -p 2200
