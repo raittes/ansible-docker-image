@@ -20,8 +20,8 @@ $ make ssh
 
 ### Custom host and/or user
 
-You can change the default USER and HOST
+You can change the default `user` and `host`
 
 ```console
-$ make ssh USER=foo HOST=bar
+$ make ssh user=foo host=bar
 ```
