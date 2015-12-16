@@ -18,10 +18,10 @@ $ make run
 $ make ssh
 ```
 
-### Custom host address
+### Custom host and/or user
 
-If you run docker in a custom host different than localhost then
+You can change the default USER and HOST
 
 ```console
-$ make ssh HOST=docker-machine-vm
+$ make ssh USER=foo HOST=bar
 ```

@@ -1,3 +1,4 @@
+USER ?= root
 HOST ?= localhost
 
 prepare:
@@ -15,4 +16,4 @@ run:
 	docker run -p 2200:22 -it ansible-base-image
 
 ssh:
-	ssh -o StrictHostKeyChecking=no root@$(HOST) -p 2200
+	ssh -o StrictHostKeyChecking=no $(USER)@$(HOST) -p 2200
