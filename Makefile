@@ -1,6 +1,9 @@
+HOST ?= localhost
+
 prepare:
 	mkdir -p tmp
 	cp ~/.ssh/id_rsa.pub tmp
+
 clean:
 	rm -rf tmp
 
@@ -12,4 +15,4 @@ run:
 	docker run -p 2200:22 -it ansible-base-image
 
 ssh:
-	ssh -o StrictHostKeyChecking=no root@localhost -p 2200
+	ssh -o StrictHostKeyChecking=no root@$(HOST) -p 2200

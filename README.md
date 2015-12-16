@@ -17,3 +17,11 @@ $ make run
 ```console
 $ make ssh
 ```
+
+### Custom host address
+
+If you run docker in a custom host different than localhost then
+
+```console
+$ make ssh HOST=docker-machine-vm
+```
